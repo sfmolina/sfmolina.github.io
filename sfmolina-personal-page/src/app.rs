@@ -19,13 +19,13 @@ use crate::{
 #[function_component(App)]
 pub fn app() -> Html {
     html! {
-        <BrowserRouter>
+        <HashRouter>
             <GlobalContextProvider>
                 <Navbar />
                 <main>
                     <Switch<Route> render={switch} />
                 </main>
             </GlobalContextProvider>
-        </BrowserRouter>
+        </HashRouter>
     }
 }
