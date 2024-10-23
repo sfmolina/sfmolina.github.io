@@ -44,7 +44,16 @@ pub fn navbar() -> Html {
                     {language.author_username}
                 </Link<Route>>
                 <button 
-                    class="navbar-toggler" 
+                    class={
+                        match current_route {
+                            Some(Route::AboutMe) => {
+                                "navbar-toggler"
+                            }
+                            _ => {
+                                "navbar-toggler white"
+                            }
+                        }
+                    } 
                     type="button" 
                     data-bs-toggle="collapse" 
                     data-bs-target="#navbarNav" 

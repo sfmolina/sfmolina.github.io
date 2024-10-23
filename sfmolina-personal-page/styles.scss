@@ -8,16 +8,48 @@ $highlighted-color: #feb048;
                 align-items: flex-start;
                 
                 .nav-item {
-                    width: 100%;
                     text-align: left;
                 }
-    
+
+                .nav-link, .dropdown-item {
+                    font-size: 1.4rem;
+                    padding: 0.7rem 0;
+                }
+
                 .nav-link {
                     padding-left: 0;
+                    width: fit-content;
+
+                    &::after {
+                        left: 0;
+                        transform: scaleX(0);
+                    }
+
+                    &:hover::after, &.activated::after, &:active::after, &:focus::after {
+                        transform: scaleX(1);
+                    }
                 }
-    
+                
                 .dropdown-menu {
+                    width: auto;
+                    min-width: max-content;
+                    max-width: 100vw;
+                    white-space: nowrap;
                     padding-left: 1rem;
+                    position: static;
+                    float: none;
+                    background-color: transparent;
+                    border: none;
+                    box-shadow: none;
+                    
+                    @media (max-width: 991px) {
+                        background-color: rgba(0, 0, 0, 0.1);
+                        padding: 0.5rem 0;
+                        .dropdown-item {
+                            padding: 0.7rem 1rem;
+                            font-size: 1.7rem;
+                        }
+                    }
                 }
             }
         }
@@ -28,6 +60,9 @@ $highlighted-color: #feb048;
         margin-right: 3px;
         transition: color 0.3s ease;
         color: white;
+        @media (max-width: 991px) {
+            font-size: 1.8rem;
+        }
   
         &:hover, &.active, &:active, &:focus {
             color: $highlighted-color;
@@ -65,18 +100,24 @@ $highlighted-color: #feb048;
     }
 
     @media (max-width: 991px) {
+
+        .navbar-brand {
+            font-size: 2rem;
+        }
+
         .navbar-collapse {
             .navbar-nav {
                 align-items: flex-start;
                 
                 .nav-item {
-                    width: 100%;
                     text-align: left;
                 }
 
                 .nav-link {
                     padding-left: 0;
                     width: fit-content;
+
+                    font-size: 1.7rem;
 
                     &::after {
                         left: 0;
@@ -86,10 +127,6 @@ $highlighted-color: #feb048;
                     &:hover::after, &.activated::after, &:active::after, &:focus::after {
                         transform: scaleX(1);
                     }
-                }
-
-                .dropdown-menu {
-                    padding-left: 1rem;
                 }
             }
         }
@@ -143,12 +180,26 @@ $highlighted-color: #feb048;
     .dropdown-menu {
         background-color: black;
         text-align: center;
+        width: auto;
+        min-width: max-content;
+        max-width: 100vw;
+        white-space: nowrap;
+
+        @media (max-width: 991px) {
+            background-color: rgba(0, 0, 0, 0.1);
+            border: none;
+            box-shadow: none;
+            padding: 0.5rem 0;
+            .dropdown-item {
+                padding: 0.7rem 1rem;
+            }
+        }
 
         .dropdown-item {
             color: white;
             display: block;
             width: 100%;
-            text-align: center;
+            text-align: left;
 
             &:hover {
                 background-color: #444;
@@ -156,6 +207,29 @@ $highlighted-color: #feb048;
 
             &:active, &:focus {
                 background-color: #444;
+            }
+
+            @media (max-width: 991px) {
+                
+            }
+        }
+    }
+
+    .navbar-toggler.white {
+        border-color: white;
+    
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+    }
+
+    @media (max-width: 991px) {
+        .navbar-toggler {
+
+            .navbar-toggler-icon {
+                width: 3rem; // Ajusta el ancho del icono
+                height: 3rem;
             }
         }
     }
@@ -365,6 +439,8 @@ $highlighted-color: #feb048;
             }
         }
     }
+
+    
 }
 
 @media (max-width: 991px) {
@@ -385,6 +461,27 @@ $highlighted-color: #feb048;
 
         .presentation {
             text-align: center;
+            margin: 0;
+            padding: 0 1rem; // Añadir padding para asegurar que el texto no toque los bordes de la pantalla
+            max-width: 100%; // Asegurarse de que ocupe todo el ancho disponible
+
+            font-size: 1.5rem;
+
+            h1 {
+                font-size: clamp(4rem, 5vw, 3.7rem);
+                font-weight: bold;
+                margin-bottom: 1.7rem;
+            }
+            
+            h2 {
+                font-size: clamp(2.8rem, 3vw, 1.7rem);
+                margin-bottom: 0rem;
+            }
+            
+            p {
+                font-size: clamp(1.9rem, 2vw, 1.1rem);
+                margin-top: 1.7rem;
+            }
         }
     }
 }
@@ -429,13 +526,7 @@ hsl(240, 100%, 19%),
 
 
 .projects {
-
     min-height: 100vh;
-    // background: linear-gradient(75deg,
-    //     hsl(240, 10%, 25%) 100%,
-    //     hsl(240, 10%, 19%) 50%,
-    //     hsl(240, 10%, 15%) 0%
-    // );
     background: linear-gradient(75deg, 
         hsl(273, 5%, 10%) 10%,
         hsl(283, 5%, 12%) 20%,
@@ -446,10 +537,7 @@ hsl(240, 100%, 19%),
     );
     overflow-x: hidden;
 
-
-
     .cards {
-
         margin-top: 80px;
 
         .card-body {
@@ -490,7 +578,6 @@ hsl(240, 100%, 19%),
         }
 
         .default-card {
-
             background: hsl(0, 0%, 5%);
 
             .project-link {
@@ -498,6 +585,40 @@ hsl(240, 100%, 19%),
             }
         }
 
+    }
+
+    @media (max-width: 991px) {
+        .cards {
+            width: 100%;
+
+            .card {
+                width: 100%;
+            }
+
+            .card-title {
+                font-size: 2.5rem;
+            }
+
+            .card-text {
+                font-size: 1.6rem;
+            }
+
+            .language-text {
+                font-size: 1.6rem;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .col {
+                width: 100%;
+                max-width: 650px; // Ajusta este valor según tus necesidades
+                margin-bottom: 20px;
+            }
+        }
     }
 }
 
