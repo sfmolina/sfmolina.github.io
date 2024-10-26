@@ -12,7 +12,6 @@ use crate::components::{
     echart_demo::EchartDemo,
     about_me::AboutMe,
     projects::Projects,
-    super_tres::SuperTresComponent,
 };
 
 
@@ -27,8 +26,6 @@ pub enum Route {
     AboutMe,
     #[at("/projects")]
     Projects,
-    #[at("/super-tres")]
-    SuperTres,
     
 }
 
@@ -39,6 +36,5 @@ pub fn switch(routes: Route) -> Html {
         Route::EchartDemo => html! { <EchartDemo /> },
         Route::AboutMe => html! { <AboutMe /> },
         Route::Projects => html! { <Projects /> },
-        Route::SuperTres => html! { <SuperTresComponent /> },
     }
 }
