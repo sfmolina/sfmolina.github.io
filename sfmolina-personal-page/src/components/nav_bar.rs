@@ -104,18 +104,12 @@ pub fn navbar() -> Html {
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <Link<Route> classes={
-                                        match current_route {
-                                            Some(Route::SuperTres) => {
-                                                classes!("nav-link", "activated")
-                                            }
-                                            _ => {
-                                                classes!("nav-link")
-                                            }
-                                        }
-                                    } to={Route::SuperTres}>
+                                    <a 
+                                        class={"nav-link"} 
+                                        href="https://sfmolina.github.io/supertres/"
+                                    >
                                         {language.nav.super_tres}
-                                    </Link<Route>>
+                                    </a>
                                 </li>
                             </ul>
                         </li>
