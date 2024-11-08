@@ -111,6 +111,14 @@ pub fn navbar() -> Html {
                                         {language.nav.super_tres}
                                     </a>
                                 </li>
+                                <li>
+                                    <a 
+                                        class={"nav-link"} 
+                                        href="https://sfmolina.github.io/mod-comp/"
+                                    >
+                                        {language.nav.mod_comp}
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     </ul>

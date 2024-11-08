@@ -21,8 +21,6 @@ pub struct Texts {
     pub nav: NavTexts,
 
     pub about_me: AboutMeTexts,
-
-    pub super_tres_check: &'static str,
 }
 
 #[derive(Debug)]
@@ -56,6 +54,7 @@ pub struct NavTexts {
     pub about_me: &'static str,
     pub projects: &'static str,
     pub super_tres: &'static str,
+    pub mod_comp: &'static str,
 
     pub language: &'static str,
     pub misc: &'static str,
@@ -78,6 +77,7 @@ pub const SPANISH_TEXTS: Texts = Texts {
         about_me: "Sobre mí",
         projects: "Proyectos",
         super_tres: "Super Tres",
+        mod_comp: "mod-comp",
         language: "Idioma",
         misc: "Misc",
         theme: "Tema",
@@ -108,8 +108,6 @@ pub const SPANISH_TEXTS: Texts = Texts {
         fav_linux_text2: "He probado Ubuntu, Fedora, Manjaro, Arch y EndeavourOS. Actualmente uso el último, y estoy muy contento. Nunca he tenido problemas, e instalar software es muy sencillo.\n\nbtw, i use Arch.",
         fav_linux_alt: "De Larry Ewing, Simon Budig, Garrett LeSage - https://isc.tamu.edu/~lewing/linux/, https://www.home.unix-ag.org/simon/penguin/, garrett/Tux on GitHub, CC0, https://commons.wikimedia.org/w/index.php?curid=753970",
     },
-
-    super_tres_check: "Comprobar",
 };
 
 
@@ -122,6 +120,7 @@ pub const ENGLISH_TEXTS: Texts = Texts {
         about_me: "About me",
         projects: "Projects",
         super_tres: "Super Tres",
+        mod_comp: "mod-comp",
         language: "Language",
         misc: "Misc",
         theme: "Theme",
@@ -152,8 +151,6 @@ pub const ENGLISH_TEXTS: Texts = Texts {
         fav_linux_text2: "I have tried Ubuntu, Fedora, Manjaro, Arch and EndeavourOS. I currently use the last one, and I am very happy. I have never had any problems, and installing software is very simple.\n\nbtw, i use Arch.",
         fav_linux_alt: "By Larry Ewing, Simon Budig, Garrett LeSage - https://isc.tamu.edu/~lewing/linux/, https://www.home.unix-ag.org/simon/penguin/, garrett/Tux on GitHub, CC0, https://commons.wikimedia.org/w/index.php?curid=753970",
     },
-
-    super_tres_check: "Check",
 };
 
 
