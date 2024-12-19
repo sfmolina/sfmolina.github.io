@@ -3,6 +3,12 @@ name = "sfmolina-personal-page"
 version = "0.1.0"
 edition = "2021"
 
+[profile.release]
+lto = true       # Link Time Optimization (LTO)
+codegen-units = 1 # Maximiza la optimización del código
+panic = "abort"  # Reduce el tamaño eliminando soporte completo para panics
+strip = true     # Elimina símbolos innecesarios del binario
+
 [dependencies]
 console_error_panic_hook = "0.1.7"
 gloo-net = "0.6.0"

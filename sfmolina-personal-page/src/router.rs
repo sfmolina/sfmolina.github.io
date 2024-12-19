@@ -38,3 +38,14 @@ pub fn switch(routes: Route) -> Html {
         Route::Projects => html! { <Projects /> },
     }
 }
+
+impl ToString for Route {
+    fn to_string(&self) -> String {
+        match self {
+            Route::Root => "/".to_string(),
+            Route::EchartDemo => "/echart-demo".to_string(),
+            Route::AboutMe => "/about-me".to_string(),
+            Route::Projects => "/projects".to_string(),
+        }
+    }
+}

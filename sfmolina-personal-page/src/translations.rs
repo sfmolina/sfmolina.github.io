@@ -34,6 +34,7 @@ pub struct AboutMeTexts {
 
     pub prof_pict_alt: &'static str,
 
+    // Future section
     pub section_1_title: &'static str,
 
     pub fav_rust_text1: &'static str,
@@ -57,12 +58,13 @@ pub struct NavTexts {
     pub mod_comp: &'static str,
 
     pub language: &'static str,
-    pub misc: &'static str,
-    pub theme: &'static str,
-
     pub es: &'static str,
     pub en: &'static str,
 
+    pub misc: &'static str,
+
+    // Future feature
+    pub theme: &'static str,
     pub neumorphism: &'static str,
     pub brutalism: &'static str,
 }
