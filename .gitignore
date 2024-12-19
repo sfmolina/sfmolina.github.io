@@ -29,6 +29,7 @@ dist/
 build/
 pkg/
 target/
+OLD/
 
 # Archivos de configuración locales
 *.log
