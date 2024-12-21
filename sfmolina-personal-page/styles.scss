@@ -327,8 +327,8 @@ $highlighted-color: #feb048;
         .presentation {
             text-align: center;
             margin: 0;
-            padding: 0 1rem; // Añadir padding para asegurar que el texto no toque los bordes de la pantalla
-            max-width: 100%; // Asegurarse de que ocupe todo el ancho disponible
+            padding: 0 1rem; 
+            max-width: 100%; 
 
             font-size: 1.5rem;
 
@@ -403,69 +403,40 @@ $background-lua: linear-gradient(50deg,
 
     .cards {
         margin-top: 3rem;
-        
-        @media (max-width: 768px) {
-            margin-top: 5rem;
-            padding: 0 1.5rem;
-        }
 
         .card {
-
             border: 2px solid rgba(255, 255, 255, 0.8);
             box-shadow: -8px 8px 24px rgba(0, 0, 0, 0.6);
             border-radius: 20px;
             color: white;
             transition: all 0.3s ease;
-
-            @media (max-width: 768px) {
-                margin-bottom: 1.5rem;
-                font-size: 1.1rem;
-                width: 100%; // Ensure full width on mobile
-            }
             
             &:hover {
                 transform: translateY(-5px);
                 box-shadow: -12px 12px 30px rgba(0, 0, 0, 0.8);
             }
 
-            @media (max-width: 768px) {
-                margin-bottom: 2rem;
-                font-size: 1.1rem;
-            }
-
             .card-body {
                 padding: 1.5rem;
 
-                @media (max-width: 768px) {
-                    padding: 1.75rem;
-                }
-
                 .language-text {
                     color: rgba(255, 255, 255, 0.9);
-                    font-size: 0.9rem;
+                    font-size: 1rem;
                     margin-top: 1.5rem;
 
                     @media (max-width: 768px) {
-                        font-size: 1rem;
+                        font-size: 1.4rem !important;
                     }
                 }
 
                 .card-title {
                     font-size: 1.4rem;
                     margin-bottom: 1rem;
-
-                    @media (max-width: 768px) {
-                        font-size: 1.6rem;
-                    }
                 }
 
                 .card-text {
                     font-size: 1rem;
                     line-height: 1.6;
-
-                    @media (max-width: 768px) {
-                        font-size: 1.1rem;
-                    }
                 }
             }
         }
@@ -495,6 +466,45 @@ $background-lua: linear-gradient(50deg,
             background: hsl(0, 0%, 5%);
             .project-link {
                 color: $highlighted-color !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+
+    .projects {
+    
+        .cards {
+            
+            margin-top: 7rem;
+
+
+            .card {
+
+                margin-bottom: 3rem;
+                width: 100%;
+    
+                .card-body {
+
+                    padding: 3rem;
+
+                    .language-text {
+
+                        font-size: 1.8rem !important;
+                    }
+    
+                    .card-title {
+
+                        font-size: 2.8rem !important; 
+                    }
+    
+                    .card-text {
+                        
+                        font-size: 1.9rem !important;
+                        line-height: 1.8;
+                    }
+                }
             }
         }
     }

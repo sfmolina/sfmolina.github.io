@@ -92,7 +92,7 @@ pub fn projects() -> Html {
                         {"Error: "}{err}
                     </div>
                 } else {
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="row row-cols-1 row-cols-lg-3 g-4">
                         {repos.iter().map(|repo| html! {
                             <div class="col" key={repo.id.to_string()}>
                                 <RepoCard repo={repo.clone()} />
