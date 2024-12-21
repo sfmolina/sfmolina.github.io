@@ -273,12 +273,6 @@
 .projects .cards {
   margin-top: 3rem;
 }
-@media (max-width: 768px) {
-  .projects .cards {
-    margin-top: 5rem;
-    padding: 0 1.5rem;
-  }
-}
 .projects .cards .card {
   border: 2px solid rgba(255, 255, 255, 0.8);
   box-shadow: -8px 8px 24px rgba(0, 0, 0, 0.6);
@@ -286,58 +280,25 @@
   color: white;
   transition: all 0.3s ease;
 }
-@media (max-width: 768px) {
-  .projects .cards .card {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    width: 100%;
-  }
-}
 .projects .cards .card:hover {
   transform: translateY(-5px);
   box-shadow: -12px 12px 30px rgba(0, 0, 0, 0.8);
 }
-@media (max-width: 768px) {
-  .projects .cards .card {
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-  }
-}
 .projects .cards .card .card-body {
   padding: 1.5rem;
 }
-@media (max-width: 768px) {
-  .projects .cards .card .card-body {
-    padding: 1.75rem;
-  }
-}
 .projects .cards .card .card-body .language-text {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-top: 1.5rem;
-}
-@media (max-width: 768px) {
-  .projects .cards .card .card-body .language-text {
-    font-size: 1rem;
-  }
 }
 .projects .cards .card .card-body .card-title {
   font-size: 1.4rem;
   margin-bottom: 1rem;
 }
-@media (max-width: 768px) {
-  .projects .cards .card .card-body .card-title {
-    font-size: 1.6rem;
-  }
-}
 .projects .cards .card .card-body .card-text {
   font-size: 1rem;
   line-height: 1.6;
-}
-@media (max-width: 768px) {
-  .projects .cards .card .card-body .card-text {
-    font-size: 1.1rem;
-  }
 }
 .projects .cards .haskell-card {
   background: linear-gradient(50deg, #433762, #5e4f87, #904d8c);
@@ -362,4 +323,27 @@
 }
 .projects .cards .default-card .project-link {
   color: #feb048 !important;
+}
+
+@media (max-width: 991px) {
+  .projects .cards {
+    margin-top: 7rem;
+  }
+  .projects .cards .card {
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+  .projects .cards .card .card-body {
+    padding: 3rem;
+  }
+  .projects .cards .card .card-body .language-text {
+    font-size: 1.8rem !important;
+  }
+  .projects .cards .card .card-body .card-title {
+    font-size: 2.8rem !important;
+  }
+  .projects .cards .card .card-body .card-text {
+    font-size: 1.9rem !important;
+    line-height: 1.8;
+  }
 }
