@@ -423,10 +423,6 @@ $background-lua: linear-gradient(50deg,
                     color: rgba(255, 255, 255, 0.9);
                     font-size: 1rem;
                     margin-top: 1.5rem;
-
-                    @media (max-width: 768px) {
-                        font-size: 1.4rem !important;
-                    }
                 }
 
                 .card-title {
