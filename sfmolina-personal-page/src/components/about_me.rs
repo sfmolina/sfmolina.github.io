@@ -65,8 +65,8 @@ fn photo_column(props: &LanguageProps) -> Html {
         <div class="col-lg-6 d-flex align-items-center justify-content-center photo-column">
             <div class="profile-picture">
                 <div class="sphere-container">
-                    // Profile picture from LinkedIn
-                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQEszowVEWeFGQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1665698796816?e=1735171200&v=beta&t=vQCzYBZgTzi0iwCj87bjL0VJPOMx1r8YenhwJahaqjY" alt={ props.language.about_me.prof_pict_alt }/>
+                    // Profile picture from public/
+                    <img src="public/profile_picture.jpg" alt={ props.language.about_me.prof_pict_alt }/>
                 </div>
                 <div class="sphere sphere1"></div>
                 <div class="sphere sphere2"></div>
